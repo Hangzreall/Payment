@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Payment Gateway</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles-container" id="particles"></div>
+    
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <div class="toggle-track">
+            <div class="toggle-thumb"></div>
+            <div class="toggle-icons">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </div>
+        </div>
+    </button>
+
+    <main class="container">
+        <section class="intro-screen" id="introScreen">
+            <div class="intro-card">
+                <div class="card-glow"></div>
+                <div class="profile-section">
+                    <div class="profile-photo">
+                        <div class="profile-ring"></div>
+                        <div class="profile-avatar">
+                            <img src="https://files.catbox.moe/itsetz.jpg" alt="Profile Photo" class="profile-image" />
+                        </div>
+                    </div>
+                    <div class="status-badge">Premium</div>
+                </div>
+                
+                <h1 class="name">
+                    <span class="name-gradient">Painzy Attaki</span>
+                </h1>
+                <p class="bio">Secure digital payment specialist providing seamless transaction experiences with cutting-edge technology and enterprise-grade security.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">256-bit</div>
+                        <div class="stat-label">Encryption</div>
+                    </div>
+                </div>
+                
+                <button class="cta-button" id="openPaymentSlide">
+                    <span class="button-bg"></span>
+                    <span class="button-content">
+                        <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                        </svg>
+                        Go to payment method
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <aside class="payment-slide" id="paymentSlide">
+            <div class="slide-backdrop"></div>
+            <div class="slide-content">
+                <div class="slide-header">
+                    <button class="close-button" id="closePaymentSlide" aria-label="Close payment gateway">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
+                    </button>
+                    <div class="slide-title-section">
+                        <h2 class="slide-title">Payment Methods</h2>
+                        <p class="slide-subtitle">Choose your preferred payment method</p>
+                    </div>
+                </div>
+                
+                <div class="payment-methods">
+                    <div class="payment-card dana-card" data-status="ready">
+                        <div class="card-shine"></div>
+                        <div class="payment-header">
+                            <div class="payment-brand">
+                                <div class="brand-icon dana-icon">D</div>
+                                <span class="brand-name">DANA</span>
+                            </div>
+                            <button class="copy-button" data-copy="081329451402" aria-label="Copy DANA number">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="payment-code">
+                            <span class="code-label">Account Number</span>
+                            <span class="code-value">081329451402</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="status-toggle" data-method="dana">
+                                <span class="status-indicator ready"></span>
+                                <span class="status-text">Ready</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="payment-card gopay-card" data-status="ready">
+                        <div class="card-shine"></div>
+                        <div class="payment-header">
+                            <div class="payment-brand">
+                                <div class="brand-icon gopay-icon">G</div>
+                                <span class="brand-name">GoPay</span>
+                            </div>
+                            <button class="copy-button" data-copy="081329451402" aria-label="Copy GoPay number">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="payment-code">
+                            <span class="code-label">Phone Number</span>
+                            <span class="code-value">081329451402</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="status-toggle" data-method="gopay">
+                                <span class="status-indicator ready"></span>
+                                <span class="status-text">Ready</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="payment-card ovo-card" data-status="not-ready">
+                        <div class="card-shine"></div>
+                        <div class="payment-header">
+                            <div class="payment-brand">
+                                <div class="brand-icon ovo-icon">O</div>
+                                <span class="brand-name">OVO</span>
+                            </div>
+                            <button class="copy-button" data-copy="081329451402" aria-label="Copy OVO number" disabled>
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="payment-code">
+                            <span class="code-label">Mobile Number</span>
+                            <span class="code-value">081329451402</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="status-toggle" data-method="ovo">
+                                <span class="status-indicator not-ready"></span>
+                                <span class="status-text">Not Ready</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="qris-card">
+                        <div class="card-shine"></div>
+                        <div class="qris-header">
+                            <div class="qris-brand">
+                                <div class="qris-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3 11h8V3H3v8zm2-6h4v4H5V5zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4z"/>
+                                        <path d="M18 13h-2v2h2v-2zM20 15h-2v2h2v-2zM22 13h-2v2h2v-2zM18 17h-2v2h2v-2zM20 19h-2v2h2v-2zM22 17h-2v2h2v-2z"/>
+                                    </svg>
+                                </div>
+                                <div class="qris-info">
+                                    <span class="qris-title">QRIS Payment</span>
+                                    <span class="qris-subtitle">Scan to pay instantly</span>
+                                </div>
+                            </div>
+                            <button class="download-button" id="downloadQris" aria-label="Download QRIS code">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="qris-preview">
+                            <div class="qr-code">
+                                <img src="https://d.uguu.se/iJTsVNdO.jpg" alt="QRIS Payment Code" class="qr-image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <div class="toast" id="toast">
+        <div class="toast-icon"></div>
+        <div class="toast-content">
+            <div class="toast-title"></div>
+            <div class="toast-message"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <audio id="gatewayAudio" preload="auto">
+        <source src="https://h.uguu.se/hyptYhFP.mp3" type="audio/mp4">
+    </audio>
+</body>
+</html>
