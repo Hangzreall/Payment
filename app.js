@@ -86,6 +86,14 @@ class PaymentGateway {
     this.downloadButton = document.getElementById("downloadQris")
     this.toast = document.getElementById("toast")
     this.statusToggles = document.querySelectorAll(".status-toggle")
+  // 🧠 FIX: disable copy buttons if payment status is not ready
+  this.copyButtons.forEach((button) => {
+    const method = button.closest(".payment-card")?.querySelector(".status-toggle")?.getAttribute("data-method")
+    if (method && this.paymentStatus[method] !== "ready") {
+      button.disabled = true
+    }
+  })
+
   }
 
   initTheme() {

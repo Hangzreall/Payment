@@ -313,7 +313,7 @@ body {
   gap: 2rem;
   flex-wrap: wrap;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin: 3rem 0; /* 🆕 Jarak atas dan bawah */
   padding: 1.5rem;
   background: var(--bg-glass);
   border-radius: 1rem;
