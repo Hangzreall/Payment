@@ -307,13 +307,10 @@ body {
 }
 
 .stats-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  text-align: center;
-  margin: 3rem 0; /* 🆕 Jarak atas dan bawah */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
   padding: 1.5rem;
   background: var(--bg-glass);
   border-radius: 1rem;
@@ -920,21 +917,4 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* ===== FIX BUTTON CLICKABILITY ===== */
-.copy-button,
-.download-button {
-  z-index: 10;
-  position: relative;
-}
-
-.card-shine,
-.card-glow,
-.particles-container {
-  pointer-events: none !important;
-}
-
-.particles-container {
-  z-index: 0 !important;
 }
