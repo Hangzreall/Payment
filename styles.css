@@ -307,9 +307,12 @@ body {
 }
 
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  text-align: center;
   margin-bottom: 2.5rem;
   padding: 1.5rem;
   background: var(--bg-glass);
